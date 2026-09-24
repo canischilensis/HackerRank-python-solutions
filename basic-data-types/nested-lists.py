@@ -1,3 +1,28 @@
+if __name__ == '__main__':
+    students = []
+    names = []
+    for _ in range(int(input())):
+        name = input()
+        score = float(input())
+        students.append([name,score])
+    # este bucle esta correcto
+        """
+        debe salir el nombre del estudiante 
+        con la nota mas baja. 
+        """
+    scores = [] #name students
+    for i in students:
+        scores.append(i[1])
+    #print(scores) se obtuvieron las notas de los estudiantes
+    del_duplicados = set(scores)
+    second = sorted(del_duplicados)[1]
+    # sus nombres deben estar en orden alfabetico
+    for flojos in students:
+        if second == flojos[1]:
+            names.append(flojos[0])
+    for name in sorted(names):
+        print(name)
+
 # Nested Lists
 
 """
