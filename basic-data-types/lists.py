@@ -1,15 +1,3 @@
-#lists hackerrank
-if __name__ == '__main__':
-    N = int(input())
-    lista = []
-    for _ in range(N):
-        s, *d = input().split()
-        d = list(map(int,d))
-        if s == "print":
-            print(lista)
-        else:
-            getattr(lista, s)(*d)
-
 
 """
 #lists hackerrank
@@ -28,3 +16,24 @@ if __name__ == '__main__':
             # primer parametro es la lista a cambiar y el segundo parametro es el metodo. 
             getattr(lista, s)(*d)
 """
+
+if __name__ == '__main__':
+    N = int(input())
+    L = []
+    for _ in range(N):
+        A = list(input().split())
+        cmd = A[0] #cmd is command
+        if cmd == "insert":
+            L.insert(int(A[1]),int(A[2]))
+        elif cmd == "append":
+            L.append(int(A[1]))
+        elif cmd == "remove":
+            L.remove(int(A[1]))
+        elif cmd == "print":
+            print(L)
+        elif cmd == "pop":
+            L.pop()
+        elif cmd == "reverse":
+            L.reverse()
+        elif cmd == "sort": 
+            L.sort()
